@@ -14,10 +14,10 @@ services:
     # restart: always
     container_name: node-grpc-client-producer-microservice
     depends_on:
-      - java-grpc-server
+      - java-grpc-producer-server
     ports:
       - 10.0.102.166:3090:3050
     links:
-      - java-grpc-server
+      - java-grpc-producer-server
     environment:
       GRPC_SERVER_IP: 10.0.102.166:53016
